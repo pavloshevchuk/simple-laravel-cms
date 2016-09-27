@@ -1,7 +1,14 @@
 # Simple Laravel CMS
 
-Application
+General
 -------
+Install core component:
+```
+$ composer install
+```
+
+Application
+-----------
 Run application:
 ```
 $ php artisan serve
