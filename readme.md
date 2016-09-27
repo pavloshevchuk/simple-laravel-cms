@@ -1,21 +1,34 @@
 # Simple Laravel CMS
 
-General
--------
-Install core component:
+About
+-----
+Basic CMS with content editing functionality based on [Laravel PHP framework 2](https://laravel.com/).
+ 
+Requirements
+------------
+* PHP 5.6
+* MySQL
+* Composer
+
+Packages
+--------
+* Laravel framework 5.3.
+* Bootstrap framework 3.3.
+
+Usage
+-----
+### Install core component:
 ```
 $ composer install
 ```
 
-Application
------------
-Run application:
+### Run application:
 ```
-$ php artisan serve
+$ php -S localhost:8000 -t public
 ```
 Or 
 ```
-$ php -S localhost:8000 -t public
+$ php artisan serve
 ```
 
 Migrations
