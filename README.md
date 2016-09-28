@@ -28,12 +28,12 @@ $ php -S localhost:8000 -t public
 ```
 Or 
 ```
-$ php artisan serve
+$ php bin/artisan serve
 ```
 
 Migrations
 ----------
 Run migration:
 ```
-$ php artisan migrate
+$ php bin/artisan migrate
 ```
