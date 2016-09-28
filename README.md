@@ -31,9 +31,24 @@ Or
 $ php bin/artisan serve
 ```
 
+Models
+------
+Create a model instance with migration:
+```
+$ php bin/artisan make:model Model\User --migration
+```
+
 Migrations
 ----------
-Run migration:
+Running migrations:
 ```
-$ php bin/artisan migrate
+$ php bin/artisan migrate --force
+```
+Rolling back migrations:
+```
+$ php bin/artisan migrate:rollback --step=1
+```
+Resetting all migrations:
+```
+$ php bin/artisan migrate:reset
 ```
