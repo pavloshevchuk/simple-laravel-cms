@@ -23,7 +23,7 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexAction()
     {
         $blogEntries = BlogEntry::all();
 
@@ -38,6 +38,16 @@ class BlogController extends Controller
             ];
         }
 
-        return view('blog', ['entries' => $entries]);
+        return view('blog/blog', ['entries' => $entries]);
+    }
+
+    public function createAction()
+    {
+        return view('blog/blog_create');
+    }
+
+    public function storeAction()
+    {
+
     }
 }

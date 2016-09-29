@@ -15,4 +15,14 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/blog', 'BlogController@index');
+Route::get('/blog', 'BlogController@indexAction');
+
+Route::get('/blog/create', [
+    'as' => 'blog_create_form',
+    'uses' => 'BlogController@createAction',
+]);
+
+Route::post('/blog/create', [
+    'as' => 'blog_create_action',
+    'uses' => 'BlogController@storeAction',
+]);
