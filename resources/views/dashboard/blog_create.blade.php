@@ -43,7 +43,7 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Create
                         </button>
-                        <a href="{{ route('dashboardBlogEntries') }}" class="btn btn-default">Cancel</a>
+                        <a href="{{ route('dashboardIndex') }}" class="btn btn-default">Cancel</a>
                     </div>
                 </form>
             </div>
