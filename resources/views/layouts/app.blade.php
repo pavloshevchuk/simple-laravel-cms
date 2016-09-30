@@ -79,7 +79,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
                     {{ config('app.name', 'Laravel') }}
                 </a>
             </div>
@@ -131,7 +131,7 @@
     @yield('content')
 
     <footer class="footer">
-        <p class="text-center">2016 &copy; {{ config('app.name', 'Laravel') }}</p>
+        <p class="text-center">2016 &copy; <span class="glyphicon glyphicon-grain" aria-hidden="true"></span> {{ config('app.name', 'Laravel') }}</p>
     </footer>
 
     <!-- Scripts -->
