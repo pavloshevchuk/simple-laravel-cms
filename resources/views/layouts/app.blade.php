@@ -87,7 +87,14 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    &nbsp;
+                    @if (Auth::check())
+                        <li class="{{ (Request::route()->getName() == 'home' ? 'active' : '') }}">
+                            <a href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li class="{{ (Request::is('dashboard*') ? 'active' : '') }}">
+                            <a href="{{ route('dashboardIndex') }}">Dashboard</a>
+                        </li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->

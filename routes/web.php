@@ -13,16 +13,27 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
-
-Route::get('/blog', 'BlogController@indexAction');
-
-Route::get('/blog/create', [
-    'as' => 'blog_create_form',
-    'uses' => 'BlogController@createAction',
+Route::get('/', [
+    'as' => 'home',
+    'uses' => 'HomeController@index',
 ]);
 
-Route::post('/blog/create', [
-    'as' => 'blog_create_action',
-    'uses' => 'BlogController@storeAction',
+Route::get('/dashboard', [
+    'as' => 'dashboardIndex',
+    'uses' => 'DashboardController@indexAction',
+]);
+
+Route::get('/dashboard/blog', [
+    'as' => 'dashboardBlogEntries',
+    'uses' => 'DashboardController@blogReadAction',
+]);
+
+Route::get('/dashboard/blog/create', [
+    'as' => 'dashboardBlogForm',
+    'uses' => 'DashboardController@blogFormAction',
+]);
+
+Route::post('/dashboard/blog/create', [
+    'as' => 'dashboardBlogStore',
+    'uses' => 'DashboardController@blogStoreAction',
 ]);

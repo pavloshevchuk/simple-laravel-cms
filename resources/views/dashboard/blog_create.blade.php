@@ -10,15 +10,14 @@
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-
                 <form role="form" method="POST"
-                      action="{{ url('/blog/create') }}">
+                      action="{{ route('dashboardBlogStore') }}">
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                         <label for="title" class="control-label">Title</label>
                         <input id="title" type="text" class="form-control"
-                               name="title" value="{{ old('email') }}"
+                               name="title" value="{{ old('title') }}"
                                autofocus>
 
                         @if ($errors->has('title'))
@@ -32,7 +31,7 @@
                         <label for="description" class="control-label">Description</label>
                         <textarea id="description"
                                   class="form-control" name="description"
-                                  rows="5"></textarea>
+                                  rows="5">{{ old('description') }}</textarea>
 
                         @if ($errors->has('description'))
                             <span class="help-block">
@@ -44,10 +43,9 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Create
                         </button>
-                        <a href="{{ url('/blog') }}" class="btn btn-default">Cancel</a>
+                        <a href="{{ route('dashboardBlogEntries') }}" class="btn btn-default">Cancel</a>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
